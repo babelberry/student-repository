@@ -1,37 +1,37 @@
 #let's put all students into an array
 students = [ 
-"Javier Silverio", 
-"Elliot Lewis", 
-"Ben Tillett", 
-"Vincent Koch", 
-"Michelle Ballard", 
-"Nick Roberts", 
-"Tatiana Soukiassian", 
-"Mervé Silk", 
-"Albert Vallverdu", 
-"Lovis Schultze", 
-"Henry Stanley", 
-"Spike Lindsey", 
-"Ruth Earle", 
-"Andy Gates", 
-"Faisal Aydarus", 
-"Ethel Ng", 
-"Kevin Daniells", 
-"Maya Driver", 
-"Leopold Kwok", 
-"James McNeil", 
-"Jerome Pratt", 
-"David Wickes", 
-"Chris Oatley", 
-"Marc Singh"]
-
+{:name => "Javier Silverio", :cohort => :august]},
+{:name => "Elliot Lewis", :cohort => :august]}, 
+{:name => "Ben Tillett", :cohort => :august]}, 
+{:name => "Vincent Koch", :cohort => :august]},
+{:name => "Michelle Ballard", :cohort => :august]}, 
+{:name => "Nick Roberts", :cohort => :august]}, 
+{:name => "Tatiana Soukiassian", :cohort => :august]}, 
+{:name => "Mervé Silk", :cohort => :august]}, 
+{:name => "Albert Vallverdu", :cohort => :august]}, 
+{:name => "Lovis Schultze", :cohort => :august]}, 
+{:name => "Henry Stanley", :cohort => :august]}, 
+{:name => "Spike Lindsey", :cohort => :august]}, 
+{:name => "Ruth Earle", :cohort => :august]}, 
+{:name => "Andy Gates", :cohort => :august]}, 
+{:name => "Faisal Aydarus", :cohort => :august]}, 
+{:name => "Ethel Ng", :cohort => :august]}, 
+{:name => "Kevin Daniells", :cohort => :august]}, 
+{:name => "Maya Driver", :cohort => :august]}, 
+{:name => "Leopold Kwok", :cohort => :august]}, 
+{:name => "James McNeil", :cohort => :august]}, 
+{:name => "Jerome Pratt", :cohort => :august]}, 
+{:name => "David Wickes", :cohort => :august]}, 
+{:name => "Chris Oatley", :cohort => :august]}, 
+{:name => "Marc Singh", :cohort => :august]},
+]
 def print_header
 	puts "The students of my cohort at Makers Academy"
 	puts "-------------------"
 end
-def print(names)
-names.each do |name|
-	puts name
+def print(students)
+students.each do |student|
+	puts "#{student[0]} (#{student[1]} cohort)"
 	end
 end
 	
