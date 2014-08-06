@@ -11,12 +11,13 @@ def input_students
 	students
 end
 def print_header
-	print "The students of my cohort at Makers Academy\n-------------------\n"
+	print "The students of my cohort at Makers Academy whose name start with an a \n-------------------\n"
 end
+
 def print_students(students)
 	students.each_with_index do |student, index|
-		print "#{index}. #{student[:name]} (#{student[:cohort]} cohort)\n"
-	end
+		print "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)\n" if student[:name].downcase.start_with? "a"
+		end 
 end
 	
 def print_footer (names)
@@ -24,6 +25,6 @@ def print_footer (names)
 end
 #nothing happens until we call the methods
 students = input_students
-print_header
+print_header 
 print_students(students)
 print_footer(students)
