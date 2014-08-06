@@ -5,7 +5,7 @@ def input_students
 	name = gets.chomp
 	while !name.empty? do 
 		students << {:name => name, :cohort => :november}
-		puts "Now we have #{students.length} students"
+		puts "Now we have #{students.length} students\n"
 		name = gets.chomp
 	end
 	students
@@ -14,13 +14,13 @@ def print_header
 	print "The students of my cohort at Makers Academy\n-------------------\n"
 end
 def print_students(students)
-	students.each do |student|
-		print "#{student[:name]} (#{student[:cohort]} cohort)"
+	students.each_with_index do |student, index|
+		print "#{index}. #{student[:name]} (#{student[:cohort]} cohort)\n"
 	end
 end
 	
 def print_footer (names)
-	print "Overall we have #{names.length} great students"
+	print "Overall we have #{names.length} great students\n"
 end
 #nothing happens until we call the methods
 students = input_students
