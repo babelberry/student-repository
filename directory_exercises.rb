@@ -11,12 +11,12 @@ def input_students
 	students
 end
 def print_header
-	print "The students of my cohort at Makers Academy whose name start with an a \n-------------------\n"
+	print "The students of my cohort at Makers Academy whose name is shorter than 12 characters\n-------------------\n"
 end
 
 def print_students(students)
 	students.each_with_index do |student, index|
-		print "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)\n" if student[:name].downcase.start_with? "a"
+		print "#{index +1}. #{student[:name]} (#{student[:cohort]} cohort)\n" if student[:name].length < 12
 		end 
 end
 	
