@@ -2,24 +2,32 @@
 def input_students
 	@students = []
 	more_student = "yes"
+
 	until more_student == "no"
 		puts "Please enter the name of the student you want to add"
 		name = gets.chomp
+			name = "N/A" if name == ""
+		puts "Please enter his or her cohort month"
+		cohort = gets.chomp
+			cohort = "N/A" if cohort == ""
 		puts "please input his or her age"
 		age = gets.chomp
+			age = "N/A" if age == ""
 		puts "please input his or her country of origin"
 		country = gets.chomp
+			country = "N/A" if country == ""
 		puts "finally, his or her hobby"
 		hobby = gets.chomp
-		add_student(name,age,country, hobby) 
+			hobby = "N/A" if hobby == ""
+		add_student(name,cohort, age,country, hobby) 
 		puts "Do you want to enter another student? yes or no"
 		more_student = gets.chomp
 	end
 	@students
 end
 
-def add_student(name, age, country, hobby)
-		@students << {:name => name, :cohort => :august, :age => age, :country => country, :hobby => hobby}
+def add_student(name, cohort, age, country, hobby)
+		@students << {:name => name, :cohort => cohort, :age => age, :country => country, :hobby => hobby}
 		puts "Now we have #{@students.length} students"
 end
 
