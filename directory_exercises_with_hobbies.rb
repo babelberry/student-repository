@@ -40,15 +40,6 @@ end
 
 def get_information
 	entered_value = gets.chomp
-	puts "You entered #{entered_value}, are you ok with that? Y or N"
-	ya_or_nay = gets.chomp
-	until ya_or_nay.downcase.start_with?("y")
-		puts "Then enter it again"
-		entered_value = gets.chomp
-		puts "You entered #{entered_value}, are you ok with that? Y or N"
-		ya_or_nay = gets.chomp
-	end
-	entered_value
 end
 
 def add_student(name, cohort, age, country, hobby)
@@ -73,7 +64,7 @@ def print_students(students)
 end
 	
 def print_footer (names)
-	puts "Overall we have #{names.length} great students"
+	puts "Overall we have #{names.length} great student#{'s' if (names.length) > 1}" 
 end
 
 
