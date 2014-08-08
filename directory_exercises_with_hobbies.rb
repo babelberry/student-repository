@@ -1,6 +1,22 @@
 #let's put all students into an array
 MONTHS = %w(january february march april may june july august september october november december)
 
+def interactive_menu
+	loop do 
+		puts"1. Input the students"
+		puts "2. Show the students"
+		puts "9. Exit"
+		selection = gets.chomp
+		case selection
+		when "1"
+			input_students
+		when "2"
+			print_students
+		when "9"
+			Exit
+		else "I don't know what you mean, please try again"
+	end
+end
 
 def input_students
 	@students = []
