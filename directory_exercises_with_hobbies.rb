@@ -2,6 +2,7 @@
 MONTHS = %w(january february march april may june july august september october november december)
 
 def interactive_menu
+	@students = []
 	loop do 
 		puts"1. Input the students"
 		puts "2. Show the students"
@@ -11,13 +12,16 @@ def interactive_menu
 		when "1"
 			input_students
 		when "2"
-			print_students
+			print_header
+			print_students(@students)
+			print_footer(@students)
 		when "9"
 			Exit
 		else "I don't know what you mean, please try again"
+		end
 	end
 end
-
+ 
 def input_students
 	@students = []
 	more_student = "yes"
@@ -86,7 +90,5 @@ end
 
 
 #nothing happens until we call the methods
+interactive_menu
 students = input_students
-print_header 
-print_students(students)
-print_footer(students)
