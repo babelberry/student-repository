@@ -12,11 +12,9 @@ def interactive_menu
 		when "1"
 			input_students
 		when "2"
-			print_header
-			print_students(@students)
-			print_footer(@students)
+			show_students
 		when "9"
-			Exit
+			exit
 		else "I don't know what you mean, please try again"
 		end
 	end
@@ -33,13 +31,13 @@ def input_students
 		puts "Please enter his or her cohort month"
 		cohort = get_cohort
 			cohort = "N/A" if cohort == ""
-		puts "please input his or her age"
+		puts "Please input his or her age"
 		age = get_information
 			age = "N/A" if age == ""
-		puts "please input his or her country of origin"
+		puts "Please input his or her country of origin"
 		country = get_information
 			country = "N/A" if country == ""
-		puts "finally, his or her hobby"
+		puts "Finally, his or her hobby"
 		hobby = get_information
 			hobby = "N/A" if hobby == ""
 		add_student(name,cohort, age,country, hobby) 
@@ -67,6 +65,12 @@ def add_student(name, cohort, age, country, hobby)
 		puts "Now we have #{@students.length} students"
 end
 
+def show_students
+		print_header
+		print_students(@students)
+		print_footer(@students)
+end
+
 def print_header
 	puts "The students of my cohort at Makers Academy".center(120)
 	puts "-------------------".center(120)
@@ -83,8 +87,8 @@ def print_students(students)
 	end 
 end
 	
-def print_footer (names)
-	puts "Overall we have #{names.length} great student#{'s' if (names.length) > 1}" 
+def print_footer (students)
+	puts "Overall we have #{students.length} great student#{'s' if (students.length) > 1}" 
 end
 
 
