@@ -20,9 +20,10 @@ This programme allows to enter and list all the students of my cohort at Makers 
 ```
 ruby directory_exercises_with_hobbies.rb 
 ```
-- Then pick 1 to input a couple of students - imaginary or real
-- Then pick 2 to display them in the Terminal
-- Finally 9 to Exit
+Then:
+- Pick 1 to input a couple of students - imaginary or real
+- Pick 2 to display them in the Terminal
+- Pick 9 to Exit
 
 ## What I learnt
 - Using Ruby methods
